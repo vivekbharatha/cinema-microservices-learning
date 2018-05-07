@@ -1,0 +1,24 @@
+{
+  "name": "cinema",
+  "version": "0.0.1",
+  "description": "A huge application built with multiple set of microservices.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vivek Bharatha",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "5.0.0-alpha.2",
+    "eslint-config-standard": "12.0.0-alpha.0",
+    "eslint-plugin-import": "2.11.0",
+    "eslint-plugin-node": "6.0.1",
+    "eslint-plugin-promise": "3.7.0",
+    "eslint-plugin-standard": "3.1.0"
+  },
+  "dependencies": {
+    "express": "4.16.3",
+    "helmet": "3.12.0",
+    "morgan": "1.9.0"
+  }
+}

@@ -1,0 +1,44 @@
+#%RAML 1.0
+title: cinema
+version: v1
+baseUrl: /
+
+types:
+	Movie:
+		properties:
+			id: string
+			title: string
+			runtime: number
+			format: string
+			plot: string
+			releaseYear: number
+			releaseMonth: number
+			releaseDay: number
+		example:
+			id: "55"
+			title: "Vivek Bharatha"
+			runtime: 111
+			format: "IMAX"
+			plot: ">"
+			releaseYear: 2018
+			releaseMonth: 5
+			releaseDay: 30
+	
+	MoviePremiers:
+		type: Movie[]
+
+resourceTypes:
+	Collection:
+		get:
+			response:
+				200:
+					body:
+						application/json:
+							type: <<item>>
+
+/movies:
+	/premieres:
+		type: { Collection: { Item: MoviePremiers } }
+
+	/{id}:
+		type: { Collection: { Item: Movie } }
